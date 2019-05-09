@@ -1,0 +1,25 @@
+---
+- name: Create a VM from a template
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: Clone the template
+    vmware_guest:
+      hostname: 192.168.1.225
+      username: administrator@vsphere.zippyops.com
+      password: 2!ppy0pS
+      validate_certs: False
+      name: testvm_2
+      template: ubuntu
+      datacenter: Datacenter
+      folder: /Datacenter/vm/
+      state: poweredon
+      esxi_hostname: 192.168.1.210
+      hardware:
+        memory_mb: 3048
+        num_cpus: 2
+        scsi: paravirtual
+      disk:
+      - size_gb: 50
+        type: thin
+        datastore: datastore1
