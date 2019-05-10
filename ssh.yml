@@ -10,4 +10,4 @@
 #    shell: yum remove httpd -y
 
   - name: transfer ssh-key
-    shell: sshpass -p "zippyops" ssh-copy-id -o StrictHostKeyChecking=no root@192.168.1.55
+    shell: sshpass -p "<password>" ssh-copy-id -o StrictHostKeyChecking=no root@192.168.1.55
