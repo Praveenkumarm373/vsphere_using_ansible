@@ -1,0 +1,5 @@
+---
+- import_playbook: playbook/delete_instance.yml
+- import_playbook: playbook/new_instance.yml
+- import_playbook: playbook/ssh.yml
+- import_playbook: playbook/httpd.yml
