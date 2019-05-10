@@ -5,9 +5,9 @@
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: 192.168.1.225
-      username: administrator@vsphere.zippyops.com
-      password: 2!ppy0pS
+      hostname: <hostname>
+      username: <username>
+      password: <password>
       validate_certs: False
       name: testvm
       template: centos_test
