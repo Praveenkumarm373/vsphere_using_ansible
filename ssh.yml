@@ -1,0 +1,13 @@
+---
+- name: Create a VM from a template
+  hosts: localhost
+  gather_facts: no
+  tasks:
+#  - name: file creation
+#    shell: yum install httpd -y
+
+#  - name: file delete
+#    shell: yum remove httpd -y
+
+  - name: transfer ssh-key
+    shell: sshpass -p "zippyops" ssh-copy-id -o StrictHostKeyChecking=no root@192.168.1.55
